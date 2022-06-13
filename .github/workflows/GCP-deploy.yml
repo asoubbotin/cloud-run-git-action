@@ -2,6 +2,8 @@ name: Docker
 
 on:
   push:
+    paths:
+      - 'api_prober/**'
     branches: [ master ]
   pull_request:
     branches: [ master ]
