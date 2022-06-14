@@ -1,10 +1,13 @@
 name: Docker
-
+## https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
 on:
   push:
     paths:
-      - 'api_prober/**'
-    branches: [ master ]
+##      - 'api_prober/**'
+        - 'server.go'
+##  branches: [ master ]
+    branches-ignore:
+      - "master"
   pull_request:
     branches: [ master ]
 
