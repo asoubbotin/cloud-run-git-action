@@ -3,7 +3,8 @@ name: Docker
 on:
   push:
     paths:
-      - 'api_prober/**'
+##      - 'api_prober/**'
+        - 'server.go'
     branches: [ master ]
   pull_request:
     branches: [ master ]
