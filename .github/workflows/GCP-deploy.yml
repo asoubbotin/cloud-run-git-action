@@ -44,4 +44,4 @@ jobs:
           run: docker push $IMAGE_NAME
 
         - name: Deploy Docker image
-          run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region us-central1 --platform managed --allow-unauthenticated
+          run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region us-central1 --platform managed --service-account=zenrouter-api-prober@prj-doitintl-credataops-stg.iam.gserviceaccount.com --allow-unauthenticated
